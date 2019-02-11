@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"name": "Huawei",
+		"image": "http://files.oldi.ru/export/0000000022/0590749_10.JPG",
+		"price": 112,
+		"qty": 253
+	},
+	{
+		"id": 2,
+		"name": "Apple",
+		"image": "https://wylsa.com/wp-content/uploads/2016/10/IMG_2142.jpg",
+		"price": 222,
+		"qty": 100
+	},
+	{
+		"id": 3,
+		"name": "Xiaomi",
+		"image": "https://edge.alluremedia.com.au/m/g/2017/09/xiaomi_a1_8.jpg",
+		"price": 125,
+		"qty": 50
+	},
+	{
+		"id": 4,
+		"name": "Samsung",
+		"image": "http://files.oldi.ru/export/0000000022/0356529_6.JPG",
+		"price": 150,
+		"qty": 70
+	}
+]
