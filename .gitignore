@@ -2,8 +2,7 @@
 
 # dependencies
 /node_modules
-/ishop3/node_modules
-/rainbowframe/node_modules
+/*/node_modules
 /.pnp
 .pnp.js
 
@@ -24,6 +23,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/ishop3/package-lock.json
-/rainbowframe/package-lock.json
+/*/package-lock.json
 /.idea
