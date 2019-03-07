@@ -1,0 +1,23 @@
+<div>
+  <p class="seats_list" *ngFor="let r of seats; index as i">
+    <span [class]="r.status ? 'active' : 'inactive'">{{ i + 1 }}</span>
+  </p>
+</div>
+<div>
+  <p>Свободные: <span>{{ freeSeat }}</span></p>
+  <p>Занятые: <span>{{ busySeat }}</span></p>
+  <p>Всего: <span>{{ allSeat }}</span></p>
+</div>
+
+<div *ngIf="freeSeat > 0">
+  <button (click)="pay()">Очная касса</button>
+  <form (change)="changeStatus()" [formGroup]="form">
+    <input type="text" formControlName="qty" class="form-control" />
+    <button type="button" (click)="payInternet()">Интернет касса</button>
+    <p [hidden]="form.valid">Вы ввели неправильные данные</p>
+    <p [hidden]="!status">Готово</p>
+  </form>
+</div>
+<p *ngIf="freeSeat < 1">Мест нет</p>
+
+<cash [qty]="qty" [valid]="status"></cash>
