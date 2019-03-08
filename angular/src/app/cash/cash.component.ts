@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Import} from '@angular/compiler-cli/src/ngtsc/host';
 
 @Component({
   selector: 'cash',

@@ -10,14 +10,20 @@
 </div>
 
 <div *ngIf="freeSeat > 0">
-  <button (click)="pay()">Очная касса</button>
+  <form (change)="change()" [formGroup]="formFullTime">
+    <input type="text" formControlName="qtyFullTime" class="form-control" />
+    <button (click)="pay()">Очная касса</button>
+    <p [hidden]="formFullTime.valid">Вы ввели неправильные данные</p>
+    <p [hidden]="!statusFullTime">Готово</p>
+  </form>
   <form (change)="changeStatus()" [formGroup]="form">
     <input type="text" formControlName="qty" class="form-control" />
     <button type="button" (click)="payInternet()">Интернет касса</button>
     <p [hidden]="form.valid">Вы ввели неправильные данные</p>
-    <p [hidden]="!status">Готово</p>
   </form>
 </div>
+<p *ngIf="buyTicket !== ''">Купленые места: {{ buyTicket }}</p>
+<p *ngIf="errorText">Невозможно купить т.к. столько мест нет</p>
 <p *ngIf="freeSeat < 1">Мест нет</p>
 
 <cash [qty]="qty" [valid]="status"></cash>
